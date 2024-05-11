@@ -5,6 +5,9 @@ export const InputField = ({ label, type, value, onValueChange }) => {
     <div className="input-field">
       <label className="input-field__label">{label}</label>
       <input
+        onChange={(event) => {
+          onValueChange(event.target.value);
+        }}
         className="input-field__input"
         type={type}
       />

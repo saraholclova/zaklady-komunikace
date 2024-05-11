@@ -1,8 +1,13 @@
 import './style.css';
 
-export const IconButton = ({ label }) => {
+export const IconButton = ({ label, onSelectName }) => {
   return (
-    <button className="icon-button">
+    <button
+      onClick={() => {
+        onSelectName(label);
+      }}
+      className="icon-button"
+    >
       <i className="user-icon" />
       <div className="button-label">{label}</div>
     </button>
